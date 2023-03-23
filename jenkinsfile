@@ -1,15 +1,10 @@
 pipeline{
     stages{
-        agent("docker"){ }
-
-        
         stage("build"){
-            docker build -t mypytimage.
+            docker 'build -t mypytimage .'
         }
-        
         stage("run"){
-            docker run mypytimage
+            docker 'run mypytimage'
         }
-        }
-    
     }
+}
