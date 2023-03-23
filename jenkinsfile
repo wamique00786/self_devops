@@ -8,6 +8,7 @@ pipeline{
             }
         }
         stage('run'){
+            agent any
             steps{
             sh 'docker run mypytimage'
             }
