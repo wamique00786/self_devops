@@ -5,10 +5,11 @@ pipeline{
         
         stage("build"){
             docker build -t mypytimage.
-        }
+        
         stage("run"){
             docker run mypytimage
         }
         }
+    }
     }
 }
