@@ -1,9 +1,9 @@
 pipeline{
     stages{
-        stage("build"){
+        stage('build'){
             docker 'build -t mypytimage .'
         }
-        stage("run"){
+        stage('run'){
             docker 'run mypytimage'
         }
     }
