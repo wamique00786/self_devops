@@ -1,0 +1,11 @@
+pipeline{
+    stages{
+        agent("docker"){
+
+        }
+        stage("build"){
+            docker build .
+            
+        }
+    }
+}
