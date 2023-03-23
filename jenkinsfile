@@ -2,6 +2,7 @@ pipeline{
     agent any
     stages{
         stage('build'){
+            agent{dockerfile true}
             steps{
             sh 'docker build -t mypytimage .'
             }
